@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-
 // import loading from "../../assets/Animation_1740565613749.gif";
 import loading from "../../assets/tech.gif";
 import gif1 from "../../assets/digital.gif"
 import gif2 from "../../assets/software.gif"
 import { motion, AnimatePresence } from "framer-motion";
+import { useSwipeable } from "react-swipeable";
 
 function Hero() {
   const [index, setIndex] = useState(0);
@@ -13,31 +13,21 @@ function Hero() {
   const next = () => {
     setIndex((prevIndex) => (prevIndex + 1) % poster.length); // Change 5 to the total number of items
   };
-
   const prev = () => {
     setIndex((prevIndex) => (prevIndex - 1 + poster.length) % poster.length); // Change 5 to the total number of items
   };
 
-  const handleTouchStart = (e) => {
-    setStartX(e.touches ? e.touches[0].clientX : e.clientX);
-  };
-
-  const handleTouchEnd = (e) => {
-    if (startX === null) return;
-
-    const endX = e.changedTouches ? e.changedTouches[0].clientX : e.clientX;
-    const difference = startX - endX;
-
-    if (difference > 50) next(); // Swipe Left
-    if (difference < -50) prev(); // Swipe Right
-
-    setStartX(null);
-  };
+  const handlers = useSwipeable({
+    onSwipedLeft: next, 
+    onSwipedRight: prev,
+    preventScrollOnSwipe: true,
+    trackMouse: true, 
+  });
 
   return (
-    <motion.section
-      onPointerDown={handleTouchStart}
-      onPointerUp={handleTouchEnd}
+    <section
+    
+    {...handlers}
       style={{
         backgroundImage: `url(${loading})`,
         backgroundRepeat: "no-repeat",
@@ -55,6 +45,7 @@ function Hero() {
       }} 
       className="h-screen w-full select-none bg-black relative"      > 
 </div>
+
       {/* <video
         key={index}
         className="h-full w-full object-cover"
@@ -63,10 +54,12 @@ function Hero() {
         loop
         muted
       /> */}
+
+
       {/* Hero Content  */}
-      <div className="h-full w-full bg-[#0000008e] top-0 absolute">
+      <div className="h-full w-full top-0 left-0 ring-0 bottom-0 absolute">
         {/* Heading and Descriptions */}
-        <div className=" text-white  md:ml-[100px] ml-8 md:h-[80%] mt-9  md:mt-0 h-[60%]  md:w-[70%] w-[80%] flex justify-center items-start flex-col">
+        <div className=" text-white  md:ml-[100px] ml-8 md:h-[80%] md:pt-[70px]  pt-[100px] h-[80%]  md:w-[70%] w-[80%] ">
           <AnimatePresence mode="wait">
             <motion.h1
               key={index + poster[index].desciption}
@@ -108,6 +101,7 @@ function Hero() {
           </AnimatePresence>
         </div>
 
+
         <div className="h-full md:w-[80px] w-[25px] top-0   absolute md:text-5xl text-2xl  left-0 flex items-center justify-end">
           <i
             onClick={prev}
@@ -116,7 +110,7 @@ function Hero() {
         </div>
 
         {/* Right */}
-        <div className="h-full md:w-[80px] w-[25px]  absolute md:text-4xl text-2xl right-0 top-0 flex items-center justify-start">
+        <div className="h-full md:w-[80px] w-[25px]  absolute md:text-5xl text-2xl right-0 top-0 flex items-center justify-start">
           <i
 
             onClick={next}
@@ -124,14 +118,14 @@ function Hero() {
           ></i>
         </div>
       </div>
-    </motion.section>
+    </section>
   );
 }
+
+
 export default Hero;
 
 const poster = [
-
-
   {
     id: 0,
     video: gif1,

@@ -1,12 +1,13 @@
 import React from 'react'
-import { Hero } from '../../components'
+import { Hero, Nav } from '../../components'
 
 function Home() {
   return (<>
-  <div className="">
+  <div className="h-[300vh]">
+    <Nav/>
     <Hero/>
+    
   </div>
-
 </>  )
 }
 
