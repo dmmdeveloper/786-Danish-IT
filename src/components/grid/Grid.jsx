@@ -23,12 +23,13 @@ function Grid({ cards = [], heading = "Our Services" }) {
                   {/* Background Image */}
                   <img
                     className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-125"
-                    src="https://i.imgur.com/QYWAcXk.jpeg"
+
+                    src={card.image}
                     alt="Photo of Cartagena"
                   />
 
                   {/* Card Content */}
-                  <div className="absolute bottom-0 left-0 w-full h-full group-hover:backdrop-blur-sm md:h-[80%] bgradientg--to-t from-black via-black/50 to-transparent translate-y-[60%] group-hover:translate-y-0 transition-transform duration-500 md:p-4 p-2 flex flex-col justify-between">
+                  <div className="absolute bottom-0 left-0 w-full h-full group-hover:bg-[#0000007e] md:h-[80%] bgradientg--to-t from-black via-black/50 to-transparent translate-y-[60%] group-hover:translate-y-0 transition-transform duration-500 md:p-4 p-2 flex flex-col justify-between">
                     {/* Title with Animated Underline */}
                     <h2 className="relative text-white md:text-lg text-sm font-bold uppercase w-fit before:absolute before:-bottom-1 before:left-0 before:h-[3px] before:w-0  before:bg-orange-500 before:transition-all before:duration-700 group-hover:before:w-full">
                       {card?.heading}

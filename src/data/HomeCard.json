@@ -3,7 +3,7 @@
     "id": 1,
     "heading": "Custom Software Development",
     "description": "Expert in Devotech, FoxPro, Oracle, HTML, Java, Python, Flutter.",
-    "image": "/images/software-development.jpg",
+    "image": "https://res.cloudinary.com/dfyfvcrkd/image/upload/v1740671056/Danish%20IT/ct9cryaki8tjynw73q67.jpg",
     "linkText": "Learn More",
     "link": "/services/software-development"
   },
@@ -11,7 +11,7 @@
     "id": 2,
     "heading": "Android & iOS App Development",
     "description": "Kotlin, Java, Flutter, React Native solutions.",
-    "image": "/images/mobile-development.jpg",
+    "image": "https://res.cloudinary.com/dfyfvcrkd/image/upload/v1740671061/Danish%20IT/qwydwlqyqppoqeoxgeql.jpg",
     "linkText": "Learn More",
     "link": "/services/mobile-development"
   },
@@ -19,7 +19,7 @@
     "id": 3,
     "heading": "Website Design & Development",
     "description": "HTML, WordPress, PHP, Laravel.",
-    "image": "/images/web-design.jpg",
+    "image": "https://res.cloudinary.com/dfyfvcrkd/image/upload/v1740671054/Danish%20IT/xd8rssa83sycyhhebhhj.jpg",
     "linkText": "Learn More",
     "link": "/services/web-development"
   },
@@ -27,7 +27,7 @@
     "id": 4,
     "heading": "SEO & Digital Marketing",
     "description": "Rank websites, YouTube channels & Facebook pages.",
-    "image": "/images/seo-marketing.jpg",
+    "image": "https://res.cloudinary.com/dfyfvcrkd/image/upload/v1740671065/Danish%20IT/k68nxd4fdtnthgcpcghd.jpg",
     "linkText": "Learn More",
     "link": "/services/seo-marketing"
   },
@@ -35,7 +35,7 @@
     "id": 5,
     "heading": "Business Branding",
     "description": "Logos, Business Profiles, Flyers, Banners, Packaging Designs.",
-    "image": "/images/business-branding.jpg",
+    "image": "https://res.cloudinary.com/dfyfvcrkd/image/upload/v1740671057/Danish%20IT/uamscqzzz8tg0hhhswue.jpg",
     "linkText": "Learn More",
     "link": "/services/business-branding"
   },
@@ -43,7 +43,7 @@
     "id": 6,
     "heading": "E-Commerce Solutions",
     "description": "Daraz, Amazon, Etsy store setup & full SEO optimization.",
-    "image": "/images/ecommerce.jpg",
+    "image": "https://res.cloudinary.com/dfyfvcrkd/image/upload/v1740671065/Danish%20IT/lyboeclzldpcvor5adrp.jpg",
     "linkText": "Learn More",
     "link": "/services/ecommerce"
   },
@@ -51,7 +51,7 @@
     "id": 7,
     "heading": "Cloud & Remote Access Services",
     "description": "Data sync, hosting, FTP, RDP, domain management.",
-    "image": "/images/cloud-services.jpg",
+    "image": "https://res.cloudinary.com/dfyfvcrkd/image/upload/v1740671537/Danish%20IT/yhzzbxcohogy4scqn1vp.avif",
     "linkText": "Learn More",
     "link": "/services/cloud-services"
   },
@@ -59,7 +59,7 @@
     "id": 8,
     "heading": "Video & Photo Editing",
     "description": "YouTube thumbnails, animations, 3D designs, podcast covers.",
-    "image": "/images/video-editing.jpg",
+    "image": "https://res.cloudinary.com/dfyfvcrkd/image/upload/v1740671062/Danish%20IT/zlqjl9ojatzy1cgeipix.jpg",
     "linkText": "Learn More",
     "link": "/services/video-editing"
   },
@@ -67,7 +67,7 @@
     "id": 9,
     "heading": "Data Recovery & System Services",
     "description": "Windows, Mac, mobile data restoration & unlock.",
-    "image": "/images/data-recovery.jpg",
+    "image": "https://res.cloudinary.com/dfyfvcrkd/image/upload/v1740671050/Danish%20IT/w4fscpfzbrswyujiud74.jpg",
     "linkText": "Learn More",
     "link": "/services/data-recovery"
   },
@@ -75,7 +75,7 @@
     "id": 10,
     "heading": "Social Media Monetization",
     "description": "YouTube, Facebook, Instagram revenue optimization.",
-    "image": "/images/social-media.jpg",
+    "image": "https://res.cloudinary.com/dfyfvcrkd/image/upload/v1740671057/Danish%20IT/jda8kvqv4ebwmlxzhoyb.jpg",
     "linkText": "Learn More",
     "link": "/services/social-media"
   },
@@ -83,7 +83,7 @@
     "id": 11,
     "heading": "Online Courses & Training",
     "description": "50+ certified learning & earning programs.",
-    "image": "/images/online-courses.jpg",
+    "image": "https://res.cloudinary.com/dfyfvcrkd/image/upload/v1740671060/Danish%20IT/nvcpjdaq8imu1q6lpz0y.jpg",
     "linkText": "Learn More",
     "link": "/services/online-courses"
   },
@@ -91,7 +91,7 @@
     "id": 12,
     "heading": "Financial & Tax Services",
     "description": "Tax challans, PayPal, Payoneer, PTA approvals.",
-    "image": "/images/financial-services.jpg",
+    "image": "https://res.cloudinary.com/dfyfvcrkd/image/upload/v1740671537/Danish%20IT/gjhbrp0paonmxzxjnsbl.jpg",
     "linkText": "Learn More",
     "link": "/services/financial-services"
   }

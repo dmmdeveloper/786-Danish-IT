@@ -33,10 +33,7 @@ function HomeAbout() {
                   style={{ fontFamily: "'Open Sans', sans-serif" }}
                   className="md:text-center text-justify text-sm md:text-[16px] text-[#111111] font-[200]"
                 >
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Doloribus magnam reprehenderit nemo quibusdam maiores quo,
-                  corrupti animi veniam nam dolorum, consequatur sapiente fuga
-                  omnis earum itaque debitis impedit temporibus commodi?
+                  {content.description}
                 </motion.p>
                 {content.line && (
                   <div className="md:h-[70px] h-[50px] w-[2px] bg-appOrange opacity-50"></div>
@@ -67,19 +64,21 @@ const Content = [
   {
     id: 0,
     headig: "welcome",
-    description: "",
+    description:
+      "Your trusted partner in innovative software solutions, based in the heart of Larkana. At Danish Technology House (DTH), we specialize in cutting-edge technology to bring your ideas to life.",
     line: true,
   },
   {
     id: 1,
     headig: "history",
-    description: "",
+    description:
+      "Danish Technology House (DTH) was founded by Noor Ahmed Panhwar with a vision to revolutionize the tech industry in Larkana. What started as a small initiative has grown into a trusted name in software development, offering innovative solutions to businesses worldwide. With a strong foundation in technology and a passion for excellence, DTH continues to evolve and lead in the ever-changing digital landscape.",
     line: true,
   },
   {
     id: 0,
     headig: "mision",
-    description: "",
+    description: "At Danish Technology House (DTH), our mission is to empower businesses with cutting-edge software solutions. We strive to innovate, transform, and simplify technology, helping our clients achieve their goals efficiently. Through dedication, expertise, and a customer-centric approach, we aim to deliver high-quality digital solutions that drive success in a rapidly advancing world.",
     line: false,
   },
 ];
