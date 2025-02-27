@@ -54,11 +54,10 @@ function Hero() {
         muted
       /> */}
 
-
       {/* Hero Content  */}
       <div className="h-full w-full top-0 left-0 ring-0 bottom-0 absolute">
         {/* Heading and Descriptions */}
-        <div className=" text-white  md:ml-[100px] ml-8 md:h-[80%] md:pt-[70px]  pt-[100px] h-[80%]  md:w-[70%] w-[80%] ">
+        <div className=" text-white  md:ml-[100px] ml-3 md:h-[80%] md:pt-[70px]  pt-[100px] h-[70%]  md:w-[70%] w-[80%] ">
           <AnimatePresence mode="wait">
             <motion.h1
               key={index + poster[index].desciption}
@@ -74,7 +73,7 @@ function Hero() {
           <AnimatePresence mode="wait">
             <motion.p
               key={index + poster[index].heading}
-              className="text-[18px] mt-3 font-[100]"
+              className="text-[18px] ml-4 md:ml-0 mt-3 font-[100]"
               style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}
               dangerouslySetInnerHTML={{ __html: poster[index].desciption }}
               initial={{ opacity: 0, x: -50 }}
@@ -84,11 +83,11 @@ function Hero() {
             />
           </AnimatePresence>
         </div>
-        <div className="md:ml-[100px] ml-8 mt-8 ">
+        <div className="md:ml-[100px] ml-8 md:mt-8 mt-4 ">
           <AnimatePresence mode="wait">
             <motion.button
               key={index + poster[index].btn}
-              className="bg-white her0-btn duration-300 border-[1.5px] border-[#ffffff7e] hover:border-white hover:scale-110  md:py-2 py-1  md:px-6 px-3 md:text-[17px] text-[15px]  rounded-lg uppercase"
+              className="bg-white her0-btn duration-300 border-[1.5px] border-[#ffffff7e] hover:border-white  hover:scale-110  md:py-2 py-1  md:px-6 px-3 md:text-[17px] text-[15px]  rounded-lg uppercase"
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.8 }}

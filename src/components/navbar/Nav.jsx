@@ -77,10 +77,7 @@ const Nav = ({ changeNav = 1 , key=Math.floor(Math.random()*8888) }) => {
 
         {/* Navigation Links Desktop */}
         <motion.div
-        //  initial={{ opacity: 0, y: -10 }}
-        //  animate={{ opacity: 1, y: 0 }}
-        //  transition={{ duration: 0.5, ease: "easeOut" }}
-        
+
         className="flex-1 items-center h-full md:flex hidden justify-end space-x-6">
           {links.map((link) => (
 <motion.div 
@@ -89,7 +86,6 @@ const Nav = ({ changeNav = 1 , key=Math.floor(Math.random()*8888) }) => {
        transition={{ duration: 0.5, ease: "easeOut" }}
   className="">
             <NavLink
-
               to={link?.to}
               key={link.text}
               className={({ isActive }) =>
@@ -149,22 +145,18 @@ const Nav = ({ changeNav = 1 , key=Math.floor(Math.random()*8888) }) => {
 <MobileNav navRef={navRef} bgTransparent={ bgTransparent} isOpen={isOpen} />
   </>);
 };
-
 // Moblie Nav Compoenent
-
 function MobileNav ({bgTransparent,isOpen , navRef }) {
-
   return(<>
-  <div ref={navRef} className={`duration-300 md:hidden border  flex min-h-[300px] rounded-lg h-auto max-w-[80%] w-[300px] mobile-nav-bg ${isOpen ? "mobile-nav":"mobile-nav-close"} `}>
+  <div ref={navRef} className={`duration-300 md:hidden border  flex min-h-[300px] rounded-lg h-auto max-w-[80%] w-[300px] mobile-nav-b bg-white shadow-sm border-appOrange ${isOpen ? "mobile-nav":"mobile-nav-close"} `}>
     <div className="min-h-[300px]  h-auto  w-full flex justify-center space-y-6 items-center flex-col  text-3xl  py-7" >
 {links.map((link)=>
-<NavLink to={link.to} key ={link.text} className={({isActive})=> `px-5 flex justify-center items-center ${isActive?"border-l-2 border-r-2 rounded-full":""} `} > {link.text}</NavLink>
+<NavLink to={link.to} key ={link.text} className={({isActive})=> `px-5 flex text-appOrange justify-center items-center ${isActive?"border-l-2 border-r-2 border-appOrange rounded-full":""} `} > {link.text}</NavLink>
 )}
 
-<Link  className="bg-white text-black px-3 rounded-full flex justify-center items-center">
+<Link  className="bg-appOrange text-white px-3 rounded-full flex justify-center items-center">
 Contact
 </Link>
-
 
 </div>
 
@@ -186,7 +178,7 @@ const links = [
   {
     id: 1,
     text: "About",
-    to: "/about",
+    to: "/about#about-section",
   },
   {
     id: 2,

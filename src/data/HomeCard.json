@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "heading": "Custom Software Development",
+    "description": "Expert in Devotech, FoxPro, Oracle, HTML, Java, Python, Flutter.",
+    "image": "/images/software-development.jpg",
+    "linkText": "Learn More",
+    "link": "/services/software-development"
+  },
+  {
+    "id": 2,
+    "heading": "Android & iOS App Development",
+    "description": "Kotlin, Java, Flutter, React Native solutions.",
+    "image": "/images/mobile-development.jpg",
+    "linkText": "Learn More",
+    "link": "/services/mobile-development"
+  },
+  {
+    "id": 3,
+    "heading": "Website Design & Development",
+    "description": "HTML, WordPress, PHP, Laravel.",
+    "image": "/images/web-design.jpg",
+    "linkText": "Learn More",
+    "link": "/services/web-development"
+  },
+  {
+    "id": 4,
+    "heading": "SEO & Digital Marketing",
+    "description": "Rank websites, YouTube channels & Facebook pages.",
+    "image": "/images/seo-marketing.jpg",
+    "linkText": "Learn More",
+    "link": "/services/seo-marketing"
+  },
+  {
+    "id": 5,
+    "heading": "Business Branding",
+    "description": "Logos, Business Profiles, Flyers, Banners, Packaging Designs.",
+    "image": "/images/business-branding.jpg",
+    "linkText": "Learn More",
+    "link": "/services/business-branding"
+  },
+  {
+    "id": 6,
+    "heading": "E-Commerce Solutions",
+    "description": "Daraz, Amazon, Etsy store setup & full SEO optimization.",
+    "image": "/images/ecommerce.jpg",
+    "linkText": "Learn More",
+    "link": "/services/ecommerce"
+  },
+  {
+    "id": 7,
+    "heading": "Cloud & Remote Access Services",
+    "description": "Data sync, hosting, FTP, RDP, domain management.",
+    "image": "/images/cloud-services.jpg",
+    "linkText": "Learn More",
+    "link": "/services/cloud-services"
+  },
+  {
+    "id": 8,
+    "heading": "Video & Photo Editing",
+    "description": "YouTube thumbnails, animations, 3D designs, podcast covers.",
+    "image": "/images/video-editing.jpg",
+    "linkText": "Learn More",
+    "link": "/services/video-editing"
+  },
+  {
+    "id": 9,
+    "heading": "Data Recovery & System Services",
+    "description": "Windows, Mac, mobile data restoration & unlock.",
+    "image": "/images/data-recovery.jpg",
+    "linkText": "Learn More",
+    "link": "/services/data-recovery"
+  },
+  {
+    "id": 10,
+    "heading": "Social Media Monetization",
+    "description": "YouTube, Facebook, Instagram revenue optimization.",
+    "image": "/images/social-media.jpg",
+    "linkText": "Learn More",
+    "link": "/services/social-media"
+  },
+  {
+    "id": 11,
+    "heading": "Online Courses & Training",
+    "description": "50+ certified learning & earning programs.",
+    "image": "/images/online-courses.jpg",
+    "linkText": "Learn More",
+    "link": "/services/online-courses"
+  },
+  {
+    "id": 12,
+    "heading": "Financial & Tax Services",
+    "description": "Tax challans, PayPal, Payoneer, PTA approvals.",
+    "image": "/images/financial-services.jpg",
+    "linkText": "Learn More",
+    "link": "/services/financial-services"
+  }
+]
