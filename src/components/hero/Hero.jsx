@@ -45,7 +45,6 @@ function Hero() {
       }} 
       className="h-screen w-full select-none bg-black relative"      > 
 </div>
-
       {/* <video
         key={index}
         className="h-full w-full object-cover"
@@ -89,7 +88,7 @@ function Hero() {
           <AnimatePresence mode="wait">
             <motion.button
               key={index + poster[index].btn}
-              className="bg-white her0-btn duration-300 border-[1.5px] border-[#ffffff7e] hover:border-white hover:scale-110  py-2 px-6 rounded-lg uppercase"
+              className="bg-white her0-btn duration-300 border-[1.5px] border-[#ffffff7e] hover:border-white hover:scale-110  md:py-2 py-1  md:px-6 px-3 md:text-[17px] text-[15px]  rounded-lg uppercase"
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.8 }}

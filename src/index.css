@@ -3,6 +3,12 @@
 @tailwind components;
 @tailwind utilities;
 
+:root{
+  --orange : #F28E13;
+  --blue:  #0D5B8C;
+  --half-blue : #6B9FBF;
+
+}
 
 .hero-icon-anim{
     background: linear-gradient(
@@ -15,7 +21,6 @@
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    text-fill-color: transparent;
     background-size: 500% auto;
     animation: textShine 5s ease-in-out infinite alternate;
   }
@@ -23,6 +28,20 @@
  .her0-btn{
     color: white;    
     background: linear-gradient(to right, rgba(22, 22, 22, 0.95), rgba(38, 43, 63, 0.95));
+  }
+  .mobile-nav-bg{
+    color: white;    
+    background: linear-gradient(to right, rgba(22, 22, 22, 0.95), rgba(38, 43, 63, 0.95));
+
+
+  }
+
+  .contact-btn:hover{
+transition: .2s linear;
+    color: white;    
+    background: linear-gradient(to right, rgba(22, 22, 22, 0.95), rgba(38, 43, 63, 0.95));
+    border:  1px solid white;
+ 
   }
 
 
@@ -34,4 +53,23 @@
       background-position: 100% 50%;
     }
   }
+
+
+  .mobile-nav{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    z-index: 30;
+    transition: .3s linear all;
+
+  }
   
+  .mobile-nav-close{
+    position: fixed;
+    top: -200%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    z-index: 30;
+    transition:  .3s linear all;
+  }
