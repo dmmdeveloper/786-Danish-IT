@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 // import loading from "../../assets/Animation_1740565613749.gif";
 import loading from "../../assets/tech.gif";
-import gif1 from "../../assets/digital.gif"
-import gif2 from "../../assets/software.gif"
+import gif1 from "../../assets/digital.gif";
+import gif2 from "../../assets/software.gif";
 import { motion, AnimatePresence } from "framer-motion";
 import { useSwipeable } from "react-swipeable";
 
@@ -18,16 +18,15 @@ function Hero() {
   };
 
   const handlers = useSwipeable({
-    onSwipedLeft: next, 
+    onSwipedLeft: next,
     onSwipedRight: prev,
     preventScrollOnSwipe: true,
-    trackMouse: true, 
+    trackMouse: true,
   });
 
   return (
     <section
-    
-    {...handlers}
+      {...handlers}
       style={{
         backgroundImage: `url(${loading})`,
         backgroundRepeat: "no-repeat",
@@ -36,15 +35,16 @@ function Hero() {
       }}
       className="h-screen w-full select-none bg-black relative"
     >
-
-<div  key={index +poster[index].gif1}   style={{
-        backgroundImage: `url(${poster[index].video})`,
-        backgroundRepeat: "no-repeat",
-        backgroundPosition: "center",
-        backgroundSize: "100% 100%",
-      }} 
-      className="h-screen w-full select-none bg-black relative"      > 
-</div>
+      <div
+        key={index + poster[index].gif1}
+        style={{
+          backgroundImage: `url(${poster[index].video})`,
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "center",
+          backgroundSize: "100% 100%",
+        }}
+        className="h-screen w-full select-none bg-black relative"
+      ></div>
       {/* <video
         key={index}
         className="h-full w-full object-cover"
@@ -57,7 +57,7 @@ function Hero() {
       {/* Hero Content  */}
       <div className="h-full w-full top-0 left-0 ring-0 bottom-0 absolute">
         {/* Heading and Descriptions */}
-        <div className=" text-white  md:ml-[100px] ml-3 md:h-[80%] md:pt-[70px]  pt-[100px] h-[70%]  md:w-[70%] w-[80%] ">
+        <div className=" text-white  md:ml-[100px] ml-3 md:h-[80%] md:pt-[70px]  pt-[100px] min-h-[70%] h-auto md:w-[70%] w-[80%] ">
           <AnimatePresence mode="wait">
             <motion.h1
               key={index + poster[index].desciption}
@@ -73,7 +73,7 @@ function Hero() {
           <AnimatePresence mode="wait">
             <motion.p
               key={index + poster[index].heading}
-              className="text-[18px] ml-4 md:ml-0 mt-3 font-[100]"
+              className="text-[18px] ml-2 md:ml-0 mt-3 font-[100]"
               style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}
               dangerouslySetInnerHTML={{ __html: poster[index].desciption }}
               initial={{ opacity: 0, x: -50 }}
@@ -83,7 +83,7 @@ function Hero() {
             />
           </AnimatePresence>
         </div>
-        <div className="md:ml-[100px] ml-8 md:mt-8 mt-4 ">
+        <div className="md:ml-[100px] ml-8 mt-8">
           <AnimatePresence mode="wait">
             <motion.button
               key={index + poster[index].btn}
@@ -99,8 +99,8 @@ function Hero() {
           </AnimatePresence>
         </div>
 
-
-        <div className="h-full md:w-[80px] w-[25px] top-0   absolute md:text-5xl text-2xl  left-0 flex items-center justify-end">
+        {/* left */}
+        <div className="h-full md:w-[80px] w-[20px] top-0   absolute md:text-5xl text-2xl  left-0 flex items-center justify-end">
           <i
             onClick={prev}
             className="fa-solid fa-chevron-left hero-icon-anim hover:scale-110 duration-300 cursor-pointer"
@@ -108,9 +108,8 @@ function Hero() {
         </div>
 
         {/* Right */}
-        <div className="h-full md:w-[80px] w-[25px]  absolute md:text-5xl text-2xl right-0 top-0 flex items-center justify-start">
+        <div className="h-full bg md:w-[80px] w-[25px]  absolute md:text-5xl text-2xl right-0 top-0 flex items-center justify-start">
           <i
-
             onClick={next}
             className="fa-solid hover:scale-110 duration-300 cursor-pointer fa-chevron-right hero-icon-anim"
           ></i>
@@ -119,7 +118,6 @@ function Hero() {
     </section>
   );
 }
-
 
 export default Hero;
 
@@ -151,4 +149,4 @@ const poster = [
     btn: "Optimize Now",
     to: "",
   },
-]
+];
