@@ -1,5 +1,13 @@
 import React from "react";
-import { Grid, Hero, HomeAbout, Homeachievements, Nav } from "../../components";
+import {
+  Grid,
+  Hero,
+  HomeAbout,
+  Homeachievements,
+  HomeFAQ,
+  Nav,
+  Slider,
+} from "../../components";
 import { HomeCards } from "../../data";
 
 function Home() {
@@ -12,15 +20,14 @@ function Home() {
         {/* Landing OverView Page  Section*/}
         <HomeAbout />
         {/* top 12 Services Skills  */}
-        <Grid  />
 
+        <Grid />
         {/* Technology Icons Slider  */}
+        <Slider />
+        {/* FAQs */}
+        <HomeFAQ />
+        <Homeachievements />
 
-        {/*  FAQs */}
-
-        {/*  */}
-        <Homeachievements/>
-        
         {/* Touch Us or Send Email  */}
         {/* Footer */}
       </div>
