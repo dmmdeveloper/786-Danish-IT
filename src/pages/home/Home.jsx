@@ -5,6 +5,7 @@ import {
   HomeAbout,
   Homeachievements,
   HomeFAQ,
+  HomeMessage,
   Nav,
   Slider,
 } from "../../components";
@@ -20,15 +21,14 @@ function Home() {
         {/* Landing OverView Page  Section*/}
         <HomeAbout />
         {/* top 12 Services Skills  */}
-
         <Grid />
         {/* Technology Icons Slider  */}
         <Slider />
         {/* FAQs */}
         <HomeFAQ />
         <Homeachievements />
-
         {/* Touch Us or Send Email  */}
+        <HomeMessage/>
         {/* Footer */}
       </div>
     </>

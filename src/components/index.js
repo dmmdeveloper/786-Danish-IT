@@ -5,5 +5,6 @@ import Grid from "./grid/Grid";
 import Homeachievements from "./about/Homeachievements";
 import HomeFAQ from "./FAQ/HomeFAQ";
 import Slider from "./slider/Slider";
+import HomeMessage from "./message/HomeMessage";
 
-export {Hero , Nav , HomeAbout ,Grid , Homeachievements , HomeFAQ  , Slider};
+export {Hero , Nav , HomeAbout ,Grid , Homeachievements,HomeFAQ ,Slider,HomeMessage};

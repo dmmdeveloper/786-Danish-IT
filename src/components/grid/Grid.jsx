@@ -130,6 +130,16 @@ function Grid({ heading = "Our Services" }) {
             </div>
           </div>
         ))}
+        {/* Explore more */}
+            <div className="text-center mt-[70px]">
+          <a
+            href={"/about#about-section"}
+            className="border-[3px] group md:py-2 py-[5px] md:px-6 px-3 learn-more border-appOrange rounded-full md:text-2xl text-xl uppercase"
+          >
+            Explore more{" "}
+            <i class="fa-solid group-hover:ml-3 duration-150 fa-arrow-right  text-appOrange"></i>{" "}
+          </a>
+        </div>
       </div>
     </div>
   );

@@ -8,7 +8,6 @@ const HomeFAQ = () => {
     setOpenIndex(openIndex === index ? null : index);
   };
 
- 
 
 const faqs = [
     {
@@ -65,6 +64,7 @@ const faqs = [
       icon: "fa-video", // Video Editing
       question: "Do you provide video editing and animation services?",
       answer:
+
         "Yes, we offer professional video editing, animation, 3D design, and YouTube content creation services.",
     },
     {
@@ -82,7 +82,7 @@ const faqs = [
         "Yes, we provide automated SMS & WhatsApp reply services, chatbot integration, and AI-driven customer support.",
     },
   ];
-  
+
 
   return (
     <div className="max-w-3xl mx-auto p-4 md:p-10">
@@ -91,13 +91,18 @@ const faqs = [
       </h2>
       <div className="md:space-y-4 space-y-2">
         {faqs.map((faq, index) => (
-          <div
-            key={faq.id}
-            className="border border-[#F28E13] rounded-2xl overflow-hidden transition-all duration-300"
+            
+          <motion.div
+          initial={{ opacity: 0,  scale: .5}}
+          whileInView={{ opacity: 1,scale:1 } }
+          viewport={{ once: false, amount: 0.4 }} 
+          transition={{ duration: 0.2, ease: "easeOut" }}
+            key={faq.question}
+            className={`border border-[#F28E13] hover:bg-orange-100 ${index === openIndex? "bg-orange-100":""} rounded-2xl overflow-hidden transition-all duration-300`}
           >
             <button
               onClick={() => toggleFAQ(index)}
-              className="w-full flex justify-between items-center p-3 md:p-5 text-lg font-medium text-left focus:outline-none text-[#F28E13]"
+              className="w-full flex justify-between itemss-center p-3 md:p-5 text-lg font-medium text-left focus:outline-none text-[#F28E13]"
             >
               <div className="flex items-center gap-3">
                 <i className={`fa-solid ${faq.icon} text-[#F28E13] text-xl`}></i>
@@ -123,7 +128,7 @@ const faqs = [
                 {faq.answer}
               </p>
             </motion.div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>
