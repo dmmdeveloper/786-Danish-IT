@@ -187,7 +187,13 @@ function MobileNav({ bgTransparent, isOpen, navRef }) {
 
           <NavLink
             to={"/contact"}
-            className = { ( {isActive})=>`px-3 rounded-full flex justify-center items-center ${isActive ?" text-appOrange border border-appOrange" :"bg-appOrange text-white "}`}
+            className={({ isActive }) =>
+              `px-3 rounded-full flex justify-center items-center ${
+                isActive
+                  ? " text-appOrange border border-appOrange"
+                  : "bg-appOrange text-white "
+              }`
+            }
           >
             Contact
           </NavLink>
