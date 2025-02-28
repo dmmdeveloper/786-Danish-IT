@@ -12,7 +12,7 @@ function Home() {
         {/* Landing OverView Page  Section*/}
         <HomeAbout />
         {/* top 12 Services Skills  */}
-        <Grid cards={HomeCards} />
+        <Grid  />
 
         {/* Technology Icons Slider  */}
 
@@ -20,8 +20,8 @@ function Home() {
 
         {/*  */}
         <Homeachievements/>
+        
         {/* Touch Us or Send Email  */}
-
         {/* Footer */}
       </div>
     </>

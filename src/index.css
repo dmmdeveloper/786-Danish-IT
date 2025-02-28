@@ -90,3 +90,99 @@ transition: .2s linear;
   --font-text: "Lato", sans-serif;
 
 }
+
+
+.card-loading {
+  background-color:#ededed;
+  background: linear-gradient(
+    100deg,
+    rgba(255, 255, 255, 0) 40%,
+    rgba(255, 255, 255, .5) 50%,
+    rgba(255, 255, 255, 0) 60%
+  ) #ededed;
+  background-size: 200% 100%;
+  background-position-x: 180%;
+  animation: 1s loading ease-in-out infinite;
+}
+
+@keyframes loading {
+  to {
+    background-position-x: -20%;
+  }
+}
+
+/* Card CSS */
+
+.home-card {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.card .home-card-img {
+  transition: transform 0.5s ease-in-out;
+}
+
+.home-card:hover .home-card-img {
+  transform: scale(1.25);
+}
+
+.home-card-content {
+  /* background: linear-gradient(to top, black, rgba(0, 0, 0, 0.5), transparent); */
+  transform: translateY(60%);
+  transition: transform 0.5s ease-in-out;
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* justify-content: space-between; */
+}
+
+.home-card:hover .home-card-content {
+  transform: translateY(0);
+}
+
+
+.home-card-h2::before {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  height: 3px;
+  width: 0;
+  background-color: orange;
+  transition: width 0.7s ease-in-out;
+}
+
+.home-card:hover .home-card-h2::before {
+  width: 100%;
+}
+
+.card p {
+  color: white;
+  font-size: 0.875rem;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.card:hover p {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card-button {
+  background-color: orange;
+  color: black;
+  font-weight: 600;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  text-decoration: none;
+}
+
+.card:hover .card-button {
+  opacity: 1;
+  transform: translateY(0);
+}
