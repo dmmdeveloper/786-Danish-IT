@@ -1,32 +1,23 @@
 import { motion } from "framer-motion";
+import Footer from "../footer/Footer";
 
 const HomeMessage = () => {
   return (
     <section
-      className="relative bg-cover bg-center bg-no-repeat py-16 px-4 md:px-12"
+      className="relative bg-cover bg-center bg-no-repeat pt-16 px-4 md:px-12"
       style={{
         backgroundImage:
-          "url(https://images.unsplash.com/photo-1693386556810-43d9451bdda5?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)",
+          "url(https://res.cloudinary.com/dfyfvcrkd/image/upload/v1740752758/Danish%20IT/gumkqmskdnkic8xm6fku.avif)",
       }} // Replace with actual image
     >
       {/* Overlay for better readability */}
-      <div className="absolute inset-0 bg-black/60"></div>
-
       {/* Content Container */}
       <div className="relative  max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 backdrop-blur-lg md:p-8 p-3 rounded-lg border border-[#ffffff88]">
-        {/* 📞 Info Section */}
-        <motion.div
-          className="flex flex-col gap-4 text-white"
-          initial={{ opacity: 0, x: -50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
-        >
+        {/*  Info Section */}
+        <motion.div className="flex flex-col gap-4 text-white">
           <h2 className="text-3xl font-bold text-white">Contact Info</h2>
 
-
           {contact.map((c) => (
-
             <a
               key={c.to}
               href={c.to}
@@ -47,26 +38,19 @@ const HomeMessage = () => {
           <div className="mt-4">
             <iframe
               className="w-full h-40 rounded-lg"
-              src="https://www.google.com/maps/embed?pb=..." 
+              src="https://www.google.com/maps/embed?pb=..."
               loading="lazy"
             ></iframe>
           </div>
-
         </motion.div>
         {/*  Email Form */}
-        <motion.form
-          className="space-y-4"
-          initial={{ opacity: 0, x: 50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
-        >
+        <motion.form className="space-y-4">
           <h2 className="text-3xl font-bold text-appOrange">Send a Message</h2>
 
           {/* Name & Email in One Line */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <input
-            required
+              required
               type="text"
               placeholder="Your Name"
               className="p-3 placeholder:text-appOrange placeholder:italic  rounded-lg w-full bg-transparent backdrop-blur-2xl border-[2px] focus:placeholder:not-italic text-white caret-appOrange border-[#ffffff82] outline-none focus:border-[white]"
@@ -75,21 +59,22 @@ const HomeMessage = () => {
               type="email"
               required
               placeholder="Your Email"
-              className="p-3 placeholder:text-appOrange placeholder:italic  rounded-lg w-full bg-transparent backdrop-blur-2xl border-[2px] focus:placeholder:not-italic text-white caret-appOrange border-[#ffffff82] outline-none focus:border-[white]"            />
+              className="p-3 placeholder:text-appOrange placeholder:italic  rounded-lg w-full bg-transparent backdrop-blur-2xl border-[2px] focus:placeholder:not-italic text-white caret-appOrange border-[#ffffff82] outline-none focus:border-[white]"
+            />
           </div>
 
           {/* Subject */}
           <input
             type="text"
             placeholder="Subject"
-        className="p-3 placeholder:text-appOrange placeholder:italic  rounded-lg w-full bg-transparent backdrop-blur-2xl border-[2px] focus:placeholder:not-italic text-white caret-appOrange border-[#ffffff82] outline-none focus:border-[white]"
+            className="p-3 placeholder:text-appOrange placeholder:italic  rounded-lg w-full bg-transparent backdrop-blur-2xl border-[2px] focus:placeholder:not-italic text-white caret-appOrange border-[#ffffff82] outline-none focus:border-[white]"
           />
 
           {/* Message Textarea */}
           <textarea
-          required
+            required
             placeholder="Your Message"
-              className="p-3 placeholder:text-appOrange h-[130px] resize-none placeholder:italic  rounded-lg w-full bg-transparent backdrop-blur-2xl border-[2px] focus:placeholder:not-italic text-white caret-appOrange border-[#ffffff82] outline-none focus:border-[white]"
+            className="p-3 placeholder:text-appOrange h-[130px] resize-none placeholder:italic  rounded-lg w-full bg-transparent backdrop-blur-2xl border-[2px] focus:placeholder:not-italic text-white caret-appOrange border-[#ffffff82] outline-none focus:border-[white]"
           ></textarea>
 
           {/* Submit Button */}
@@ -98,6 +83,8 @@ const HomeMessage = () => {
           </button>
         </motion.form>
       </div>
+      <Footer/>
+  
     </section>
   );
 };
