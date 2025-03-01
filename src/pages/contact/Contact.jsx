@@ -3,6 +3,7 @@ import { FoTer, Nav } from "../../components";
 import FrormSection from "./FrormSection";
 
 function Contact() {
+  
   return (
     <>
       <div className="min-h-screen w-full">
@@ -35,6 +36,8 @@ function Contact() {
 
         {/* Form Section */}
         <FrormSection/>
+<DirectContact/>
+        {/*  */}
         <FoTer/>
     
       </div>
@@ -43,3 +46,59 @@ function Contact() {
 }
 
 export default Contact;
+
+const DirectContact = () => {
+  const contacts = [
+    {
+      icon: <i className="fa fa-phone text-appOrange text-5xl"></i>,
+      title: "Phone",
+      details: [
+        { label: "Office Contact", value: "+92 331 1285705", link: "tel:+923001234567" },
+        { label: "Manager Contact", value: "+92 331 1285705", link: "tel:+923157654321" },
+      ],
+    },
+    {
+      icon: <i className="fa fa-envelope text-appOrange text-5xl"></i>,
+      title: "Email",
+      details: [
+        { label: "Office Email", value: "office@example.com", link: "mailto:office@example.com" },
+        { label: "Manager Email", value: "manager@example.com", link: "mailto:manager@example.com" },
+      ],
+    },
+    {
+      icon: <i className="fa-solid fa-location-dot text-appOrange animate-heartbeat  text-5xl"></i>,
+      title: "Address",
+      details: [
+        { label: "Office Address", value: "123, Business Street, Larkana, Pakistan", link: "#" },
+      ],
+    },
+  ];
+
+  return (
+    <div className="p-6 max-w-3xl mx-auto">
+      <h2 className="text-3xl font-bold text-center mb-6 text-appOrange">Direct Contact</h2>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {contacts.map((contact, index) => (
+          <div
+            key={index}
+            className="p-5 flex flex-col items-center bg-white  transition-all"
+          >
+            <div className="mb-3">{contact.icon}</div>
+            <h3 className="text-xl font-semibold">{contact.title}</h3>
+            <div className="mt-2 text-center">
+              {contact.details.map((detail, i) => (
+                <p key={i} className="mt-2 flex flex-col">
+                  <strong>{detail.label}: </strong>
+                  <a href={detail.link}  target="_blank" className="text-appOrange hover:underline">
+                    {detail.value}
+                  </a>
+                </p>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+

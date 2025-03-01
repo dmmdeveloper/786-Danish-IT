@@ -309,7 +309,7 @@ function Portfolio() {
           <div
             className={`w-full  z-50 ${
               activeCategory == "All" ? "sticky top-0" : "relative"
-            }    md:py-2 py-1 flex items-center mb-8`}
+            }    md:py-2 py-1 bg-white flex items-center mb-8`}
           >
             {/* Left Navigation Button */}
             <button
@@ -417,7 +417,7 @@ function ServiceModal({ service, onClose }) {
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         exit={{ opacity: 0, scale: 0.8 }}
-        transition={{ duration: 0.3, ease: "easeOut" }}
+        transition={{ duration: 0.1, ease: "easeOut" }}
         className="bg-white p-6 rounded-lg shadow-lg max-w-lg w-full relative"
       >
         <button

@@ -113,4 +113,26 @@ transition: .2s linear;
 
 
 /* Contact Form Section */
+input[type="checkbox"] {
+  appearance: none; /* Remove default styles */
+  width: 20px;
+  height: 20px;
+  border: 2px solid white;
+  background-color: transparent;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+input[type="checkbox"]:checked {
+  background-color: white;
+  position: relative;
+}
+
+input[type="checkbox"]:checked::after {
+  content: "✔";
+  color: orange;
+  font-size: 16px;
+  font-weight: bold;
+}
