@@ -1,5 +1,5 @@
 import React, { useState , useRef } from "react";
-import { Nav } from "../../components";
+import { FoTer, Nav } from "../../components";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules"; // Import Swiper Navigation module
 import "swiper/css";
@@ -74,7 +74,8 @@ function Portfolio() {
         </section>
         {/* Services Section */}
         <section className="py-8 px-4 sm:px-6 md:px-12">
-          <h2 className="text-3xl font-bold text-center mb-6">Our Services</h2>
+
+          <h2 className="text-3xl font-bold text-center mb-6">Our Work</h2>
 
           {/* Category Slider with Navigation */}
           <div className="relative w-full mb-8">
@@ -152,7 +153,6 @@ function Portfolio() {
             </motion.div>
           </AnimatePresence>
         </section>
-
         {/* Service Modal */}
         {selectedService && (
           <ServiceModal
@@ -160,6 +160,8 @@ function Portfolio() {
             onClose={() => setSelectedService(null)}
           />
         )}
+
+        <FoTer/>
       </div>
     </>
   );

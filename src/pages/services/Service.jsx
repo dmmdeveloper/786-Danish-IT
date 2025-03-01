@@ -1,12 +1,12 @@
 import React from 'react'
-import { Nav } from '../../components'
+import { FoTer, Nav } from '../../components'
 
 function Service() {
   return (
     <>
-<section  className='h-screen w-full bg-gray-500' >
-
+<section  className='h-auto w-full bg-gray-500' >
     <Nav/>
+    <FoTer/>
 </section>
 
     

@@ -1,5 +1,5 @@
 import React from "react";
-import { Nav } from "../../components";
+import { FoTer, Nav } from "../../components";
 import FrormSection from "./FrormSection";
 
 function Contact() {
@@ -34,8 +34,8 @@ function Contact() {
         </div>
 
         {/* Form Section */}
-
         <FrormSection/>
+        <FoTer/>
     
       </div>
     </>

@@ -93,7 +93,6 @@ function Grid({ heading = "Our Services" }) {
   const memoizedCards = useMemo(() => cards, []);
   return (
     <div className="md:w-[80%] w-[95%] mx-auto mt-24">
-
       {heading && (
         <h1 className="text-3xl font-bold text-center text-[#F28E13] mb-6">
           {heading}
@@ -112,35 +111,38 @@ function Grid({ heading = "Our Services" }) {
             </div>
 
             {/* Heading */}
-            <h2 className="md:text-xl text-sm font-bold text-gray-800">{card.heading}</h2>
+            <h2 className="md:text-xl text-sm font-bold text-gray-800">
+              {card.heading}
+            </h2>
 
             {/* Description */}
-            <p className="text-gray-600 md:text-sm text-[10px] mt-2">{card.description}</p>
+            <p className="text-gray-600 md:text-sm text-[10px] mt-2">
+              {card.description}
+            </p>
 
             {/* Link */}
             <div className="flex justify-center mt-4  items-center gap-3">
-            <Link
-              to={card.link}
-              className=" bg-[#F28E13] text-white font-semibold md:py-2  py-1 md:px-4 px-2 rounded-full md:text-sm text-[10px] transition-all duration-300 hover:bg-orange-600"
-            >
-              Learn More
-            </Link>
+              <Link
+                to={card.link}
+                className=" bg-[#F28E13] text-white font-semibold md:py-2  py-1 md:px-4 px-2 rounded-full md:text-sm text-[10px] transition-all duration-300 hover:bg-orange-600"
+              >
+                Learn More
+              </Link>
 
-            <i class="fa-brands fa-whatsapp block text-appOrange text-2xl md:text-4xl cursor-pointer hover:scale-90 duration-200"></i>
+              <i class="fa-brands fa-whatsapp block text-appOrange text-2xl md:text-4xl cursor-pointer hover:scale-90 duration-200"></i>
             </div>
           </div>
         ))}
         {/* Explore more */}
-
-            <div className="text-center mt-[70px]">
-          <a
-            href={"/about#about-section"}
-            className="border-[3px] group md:py-2 py-[5px] md:px-6 px-3 learn-more border-appOrange rounded-full md:text-2xl text-[12px] uppercase"
-          >
-            Explore more{" "}
-            <i class="fa-solid group-hover:ml-3 duration-150 fa-arrow-right  text-appOrange"></i>{" "}
-          </a>
-        </div>
+      </div>
+      <div className="text-start py-3 w-full mt-[70px]">
+        <a
+          href={"/about#about-section"}
+          className="border-[3px] group md:py-2 wau py-[5px] md:px-6 px-3 learn-more border-appOrange rounded-full md:text-2xl text-[12px] uppercase"
+        >
+          Discover more{" "}
+          <i class="fa-solid group-hover:ml-3 duration-150 fa-arrow-right  text-appOrange"></i>{" "}
+        </a>
       </div>
     </div>
   );
