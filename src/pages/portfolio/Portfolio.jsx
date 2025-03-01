@@ -309,11 +309,11 @@ function Portfolio() {
           <div
             className={`w-full  z-50 ${
               activeCategory == "All" ? "sticky top-0" : "relative"
-            }   bg-white py-2 flex items-center mb-8`}
+            }    md:py-2 py-1 flex items-center mb-8`}
           >
             {/* Left Navigation Button */}
             <button
-              className="prev-btn text-3xl md:text-4xl text-appOrange ml-1 mr-3 hover:scale-110 duration-200 "
+              className="prev-btn text-3xl md:text-4xl text-appOrange ml-1 md:mr-3 mr-1 hover:scale-110 duration-200 "
               onClick={() => swiperRef.current?.slidePrev()}
             >
               <i class="fa-solid fa-chevron-left"></i>{" "}
@@ -324,7 +324,7 @@ function Portfolio() {
               setActiveCategory={setActiveCategory}
             />
             <button
-              className="prev-btn text-3xl md:text-4xl text-appOrange mr-1 ml-3 hover:scale-110 duration-200 "
+              className="prev-btn text-3xl md:text-4xl text-appOrange mr-1 md:ml-3 ml-1 hover:scale-110 duration-200 "
               onClick={() => swiperRef.current?.slideNext()}
             >
               <i class="fa-solid fa-chevron-right"></i>{" "}
@@ -343,8 +343,8 @@ function Portfolio() {
                   key={service.id}
                   className={`border h-[250px] rounded-lg shadow-md cursor-pointer hover:shadow-lg transition-all overflow-hidden relative group ${
                     activeCategory === "All"
-                      ? "w-full h-[180px]"
-                      : "w-[90%] mx-auto"
+                      ? "w-full h-[160px]"
+                      : "md:w-full w-[90%]  mx-auto"
                   }`}
                   onClick={() => setSelectedService(service)}
                   initial={{ opacity: 0, scale: 0.9 }}
@@ -396,6 +396,7 @@ function ServiceModal({ service, onClose }) {
   const popUpRef = useRef(null);
 
   useEffect(() => {
+
     function handleClickOutside(event) {
       if (popUpRef.current && !popUpRef.current.contains(event.target)) {
         onClose();
@@ -403,16 +404,14 @@ function ServiceModal({ service, onClose }) {
     }
 
     document.addEventListener("mousedown", handleClickOutside);
-    document.addEventListener("touchstart", handleClickOutside);
 
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
-      document.removeEventListener("touchstart", handleClickOutside);
     };
   }, [onClose]); // ✅ Cleanup function added
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-[#00000000]  backdrop-blur-sm">
       <motion.div
         ref={popUpRef} // ✅ Correctly assigned ref
         initial={{ opacity: 0, scale: 0.8 }}
@@ -447,17 +446,17 @@ function CategoriesSwiper({ swiperRef, activeCategory, setActiveCategory }) {
         grabCursor={true} // Enable grab cursor
         onSwiper={(swiper) => (swiperRef.current = swiper)} // Store instance
         breakpoints={{
-          640: { slidesPerView: 3 },
-          768: { slidesPerView: 4 },
+          640: { slidesPerView: 3  , spaceBetween:5 },
+          768: { slidesPerView: 4 , spaceBetween:5 },
           1024: { slidesPerView: 5 },
           1280: { slidesPerView: 6 },
         }}
-        className="md:mx-10 mx-4 flex items-center"
+        className="md:mx-10 mx-2 flex items-center  "
       >
         {categories.map((category) => (
           <SwiperSlide key={category} className="text-center">
             <button
-              className={`md:px-[6px] px-[2px] md:py-2 py-1 md:w-full w-full rounded-md md:text-lg text-[12px] transition-all duration-200 ${
+              className={`md:py-2 py-1  w-full rounded-md md:text-lg text-[12px] transition-all duration-200 ${
                 activeCategory === category
                   ? "bg-orange-500 text-white"
                   : "text-appOrange border"
