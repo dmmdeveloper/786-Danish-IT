@@ -77,7 +77,7 @@ const Content = [
   },
   {
     id: 0,
-    headig: "mision",
+    headig: "mission",
     description: "At Danish Technology House (DTH), our mission is to empower businesses with cutting-edge software solutions. We strive to innovate, transform, and simplify technology, helping our clients achieve their goals efficiently. Through dedication, expertise, and a customer-centric approach, we aim to deliver high-quality digital solutions that drive success in a rapidly advancing world.",
     line: false,
   },
