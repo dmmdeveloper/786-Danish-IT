@@ -4,7 +4,7 @@ import { Link, NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
 
 const Nav = ({ changeNav = 1, key = Math.floor(Math.random() * 8888) }) => {
-  const [lastScrollY, setLastScrollY] = useState(0);
+  const [lastScrollY, setLastScrollY] = useState(10);
   const [visible, setVisible] = useState(true);
   const [bgTransparent, setBgTransparent] = useState(true);
 
@@ -107,7 +107,7 @@ const Nav = ({ changeNav = 1, key = Math.floor(Math.random() * 8888) }) => {
             {/* Contact Button */}
             <NavLink
               style={{ fontFamily: "Plus Jakarta Sans" }}
-              to={"/contact"}
+              to={"/contact#contact-hero"}
               className={({ isActive }) =>
                 ` ${
                   bgTransparent
@@ -163,7 +163,7 @@ function MobileNav({ bgTransparent, isOpen, navRef }) {
     <>
       <div
         ref={navRef}
-        className={`duration-300 md:hidden border  flex min-h-[300px] rounded-lg h-auto max-w-[80%] w-[300px] mobile-nav-b bg-white shadow-sm border-appOrange ${
+        className={`duration-300 md:hidden border   flex min-h-[300px] rounded-lg h-auto max-w-[80%] w-[300px] mobile-nav-b bg-white shadow-sm border-appOrange ${
           isOpen ? "mobile-nav" : "mobile-nav-close"
         } `}
       >
@@ -207,7 +207,7 @@ const links = [
   {
     id: 0,
     text: "Home",
-    to: "/",
+    to: "/#home-hero",
   },
   {
     id: 1,
@@ -222,7 +222,7 @@ const links = [
   {
     id: 3,
     text: "Portfolio",
-    to: "/portfolio",
+    to: "/portfolio#portfolio",
   },
 ];
 export default Nav;

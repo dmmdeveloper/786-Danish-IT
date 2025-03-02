@@ -5,6 +5,7 @@ import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/navigation"; // Import navigation styles
 import { motion, AnimatePresence } from "framer-motion";
+import { useLocation } from "react-router-dom";
 
 const categories = [
   "All",
@@ -280,14 +281,31 @@ function Portfolio() {
   const [activeCategory, setActiveCategory] = useState("All");
   const [selectedService, setSelectedService] = useState(null);
   const swiperRef = useRef(null);
+  const {hash} =useLocation()
+
 
   const filteredServices =
     activeCategory === "All"
       ? services
       : services.filter((service) => service.category === activeCategory);
+
+
+      useEffect(() => {
+        if (hash) {
+          setTimeout(() => {
+            const element = document.querySelector(hash);
+            if (element) {
+              element.scrollIntoView({ behavior: "auto" });
+            }
+          }, 100);
+        } else {
+          window.scrollTo(0, 0);
+        }
+      }, [hash]);
   return (
     <>
       <div className="w-full min-h-screen">
+        <span id="portfolio" ></span>
         <Nav changeNav={0.8} />
         <section
           className="relative h-[60vh] sm:h-[70vh] md:h-[80vh] bg-cover bg-center"
@@ -307,14 +325,14 @@ function Portfolio() {
 
           {/* Category Slider with Navigation */}
           <div
-            className={`w-full  z-50 ${
-              activeCategory == "All" ? "sticky top-0" : "relative"
-            }    md:py-2 py-1 bg-white flex items-center mb-8`}
+            className={`w-full  z-50
+              sticky top-0
+               md:py-2 py-1 bg-white flex items-center mb-8`}
           >
             {/* Left Navigation Button */}
             <button
               className="prev-btn text-3xl md:text-4xl text-appOrange ml-1 md:mr-3 mr-1 hover:scale-110 duration-200 "
-              onClick={() => swiperRef.current?.slidePrev()}
+              onClick={() => swiperRef.current?.slidePre2v()}
             >
               <i class="fa-solid fa-chevron-left"></i>{" "}
             </button>
@@ -418,7 +436,7 @@ function ServiceModal({ service, onClose }) {
         animate={{ opacity: 1, scale: 1 }}
         exit={{ opacity: 0, scale: 0.8 }}
         transition={{ duration: 0.1, ease: "easeOut" }}
-        className="bg-white p-6 rounded-lg shadow-lg max-w-lg w-full relative"
+        className="bg-white p-6 rounded-lg shadow-lg max-w-lg w-[90%] relative"
       >
         <button
           className="absolute top-2 right-2 text-gray-600 hover:text-black text-2xl"

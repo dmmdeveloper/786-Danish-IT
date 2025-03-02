@@ -1,4 +1,4 @@
-import React from "react";
+import React  , {useEffect} from "react";
 import {
   Grid,
   Hero,
@@ -10,12 +10,28 @@ import {
   Slider,
 } from "../../components";
 import { HomeCards } from "../../data";
-
+import { useLocation } from "react-router-dom";
 function Home() {
+
+  const {hash}  = useLocation()
+
+  useEffect(() => {
+    if (hash) {
+      setTimeout(() => {
+        const element = document.querySelector(hash);
+        if (element) {
+          element.scrollIntoView({ behavior: "auto" });
+        }
+      }, 100);
+    } else {
+      window.scrollTo(0, 0);
+    }
+  }, [hash]);
+  
   return (
     <>
       <div className="h-[300vh]">
-        <span></span>
+        <span id="home-hero" ></span>
         <Nav />
         <Hero />
         {/* Landing OverView Page  Section*/}

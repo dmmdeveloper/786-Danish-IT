@@ -1,22 +1,22 @@
 import { Link } from "react-router-dom";
 
 const footerData = {
-    services: [
-        { name: "Software Development", link: "/software-development" },
-        { name: "App Development (Android & iOS)", link: "/app-development" },
-        { name: "Website Development & Design", link: "/web-development" },
-        { name: "Cloud Services", link: "/cloud-services" },
-        { name: "SEO & Digital Marketing", link: "/seo-marketing" },
-        { name: "Business Profile Creation", link: "/business-profile" },
-        { name: "Logo & Graphic Design", link: "/logo-design" },
-        { name: "Networking (LAN/WiFi)", link: "/networking" },
-        { name: "Content Creation & Animation", link: "/content-animation" },
-        { name: "E-Commerce Solutions", link: "/ecommerce" },
-      ],
+  services: [
+    { name: "Software Development", link: "/software-development" },
+    { name: "App Development (Android & iOS)", link: "/app-development" },
+    { name: "Website Development & Design", link: "/web-development" },
+    { name: "Cloud Services", link: "/cloud-services" },
+    { name: "SEO & Digital Marketing", link: "/seo-marketing" },
+    { name: "Business Profile Creation", link: "/business-profile" },
+    { name: "Logo & Graphic Design", link: "/logo-design" },
+    { name: "Networking (LAN/WiFi)", link: "/networking" },
+    { name: "Content Creation & Animation", link: "/content-animation" },
+    { name: "E-Commerce Solutions", link: "/ecommerce" },
+  ],
   information: [
-      { name: "Home", link: "/" },
-      { name: "About", link: "/about" },
-      { name: "Services", link: "/services" },
+    { name: "Home", link: "/" },
+    { name: "About", link: "/about" },
+    { name: "Services", link: "/services" },
     { name: "Portfolio", link: "/portfolio" },
     { name: "Contact us", link: "/contact" },
     // { name: "FAQs", link: "/faqs" },
@@ -40,12 +40,14 @@ export default function FoTer() {
   return (
     <footer className="bg-gray-900 text-gray-300 py-10">
       <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        
         {/* Logo & About */}
         <div>
-          <h2 className="text-white text-2xl font-bold mb-4">Danish Technology House</h2>
+          <h2 className="text-white text-2xl font-bold mb-4">
+            Danish Technology House
+          </h2>
           <p className="text-sm">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            eiusmod tempor.
           </p>
         </div>
 
@@ -55,13 +57,12 @@ export default function FoTer() {
           <ul className="space-y-2 text-sm">
             {footerData.services.map((service, index) => (
               <li key={index}>
-            <Link
-  to={service.link}
-  className=" relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:mt-2 after:h-[1px] after:w-0 after:bg-orange-400 after:transition-all after:duration-300 hover:after:w-full after:right-0 after:mx-auto after:block"
->
-  {service.name}
-</Link>
-
+                <Link
+                  to={service.link}
+                  className=" relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:mt-2 after:h-[1px] after:w-0 after:bg-orange-400 after:transition-all after:duration-300 hover:after:w-full after:right-0 after:mx-auto after:block"
+                >
+                  {service.name}
+                </Link>
               </li>
             ))}
           </ul>
@@ -73,13 +74,12 @@ export default function FoTer() {
           <ul className="space-y-2 text-sm">
             {footerData.information.map((info, index) => (
               <li key={index}>
-             <Link
-  to={info.link}
-  className=" relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[1px] after:w-0 after:bg-orange-400 after:transition-all after:duration-300 hover:after:w-full after:block"
->
-  {info.name}
-</Link>
-
+                <Link
+                  to={info.link}
+                  className=" relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[1px] after:w-0 after:bg-orange-400 after:transition-all after:duration-300 hover:after:w-full after:block"
+                >
+                  {info.name}
+                </Link>
               </li>
             ))}
           </ul>
@@ -95,7 +95,11 @@ export default function FoTer() {
           {/* Social Media */}
           <div className="flex space-x-4 mt-4">
             {footerData.socialLinks.map((social, index) => (
-              <a key={index} href={social.link} className="text-white hover:text-orange-400">
+              <a
+                key={index}
+                href={social.link}
+                className="text-white hover:text-orange-400"
+              >
                 <i className={social.icon}></i>
               </a>
             ))}
@@ -104,15 +108,20 @@ export default function FoTer() {
       </div>
       {/* Newsletter */}
       <div className="mt-10 text-center">
-        <p className="text-sm">Don't miss to subscribe to our new feeds, kindly fill the form below.</p>
+        <p className="text-sm">
+          Don't miss to subscribe to our new feeds, kindly fill the form below.
+        </p>
         <form className="mt-4 flex justify-center">
           <input
-          required
+            required
             type="email"
             placeholder="Email Address"
             className="px-4 py-2 rounded-l-md border-none text-black outline-none"
           />
-          <button type="submit" className="bg-orange-500 px-4 py-2 rounded-r-md text-white hover:bg-orange-600 transition">
+          <button
+            type="submit"
+            className="bg-orange-500 px-4 py-2 rounded-r-md text-white hover:bg-orange-600 transition"
+          >
             Subscribe
           </button>
         </form>

@@ -61,17 +61,17 @@ transition: .2s linear;
     top: 50%;
     left: 50%;
     transform: translate(-50% , -50%);
-    z-index: 30;
+    z-index: 300;
     transition: .3s linear all;
-
   }
   
   .mobile-nav-close{
+
     position: fixed;
     top: -200%;
     left: 50%;
     transform: translate(-50% , -50%);
-    z-index: 30;
+    z-index: 300;
     transition:  .3s linear all;
   }
   ::selection{
@@ -110,7 +110,6 @@ transition: .2s linear;
     background-position-x: -20%;
   }
 }
-
 
 /* Contact Form Section */
 input[type="checkbox"] {

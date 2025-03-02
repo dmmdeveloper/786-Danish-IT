@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import Select from "react-select";
 
-
 const posters = [
   "https://res.cloudinary.com/dfyfvcrkd/image/upload/v1740754773/Danish%20IT/pyzurauiaiwzajv851bo.gif",
   "https://res.cloudinary.com/dfyfvcrkd/image/upload/v1740754778/Danish%20IT/r63hxml6py8ztnvorky3.gif",
@@ -29,9 +28,13 @@ const onSubmit = (data) => {
   console.log("Form Data:", data);
 };
 function FrormSection() {
-
   const [index, setIndex] = useState(0);
-const { register, handleSubmit, setValue, formState: { errors } } = useForm();
+  const {
+    register,
+    handleSubmit,
+    setValue,
+    formState: { errors },
+  } = useForm();
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -78,15 +81,17 @@ const { register, handleSubmit, setValue, formState: { errors } } = useForm();
       </div>
       {/* Form */}
       {/* Form Section */}
+
       <div className="md:h-full h-1/2 md:w-1/2 w-[90%] flex-col py-10 flex justify-around items-center">
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className="h-auto md:w-[80%] w-full rounded-lg backdrop-blur-lg border text-white p-6 space-y-4"
+          className="h-auto md:w-[80%] w-full rounded-lg backdrop-blur-lg border text-white md:p-6 p-3 space-y-4"
         >
           {/* Name Fields */}
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div>
+          <div className="flex w-full md:flex-row flex-col  items-center gap-1">
+
+            <div className="md:w-1/2 w-full" >
               <label className="block">
                 First Name <span className="text-appOrange">*</span>
               </label>
@@ -94,7 +99,7 @@ const { register, handleSubmit, setValue, formState: { errors } } = useForm();
                 {...register("firstName", {
                   required: "First name is required",
                 })}
-                className="bg-transparent border-[2px] border-[#ffffff5b]  focus:border-white py-[2px] pl-1 rounded-md outline-none"
+                className="bg-transparent border-[2px] border-[#ffffff5b]  w-full focus:border-white py-[2px] pl-1 rounded-md outline-none"
                 // placeholder="John"
               />
               {errors.firstName && (
@@ -104,7 +109,7 @@ const { register, handleSubmit, setValue, formState: { errors } } = useForm();
               )}
             </div>
 
-            <div>
+            <div className="md:w-1/2 w-full" >
               <label className="block">
                 Last Name <span className="text-appOrange">*</span>
               </label>
@@ -113,7 +118,7 @@ const { register, handleSubmit, setValue, formState: { errors } } = useForm();
                   required: "Last name is required",
                 })}
                 type="text"
-                className="bg-transparent border-[2px] border-[#ffffff5b]  focus:border-white py-[2px] pl-1 rounded-md outline-none"
+                className="bg-transparent w-full border-[2px] border-[#ffffff5b]  focus:border-white py-[2px] pl-1 rounded-md outline-none"
                 // placeholder="d"
               />
               {errors.lastName && (
@@ -125,8 +130,8 @@ const { register, handleSubmit, setValue, formState: { errors } } = useForm();
           </div>
 
           {/* Email & Company */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div>
+          <div className="flex w-full md:flex-row flex-col  items-center gap-1">
+            <div className="md:w-1/2 w-full">
               <label className="block">
                 Work email address <span className="text-appOrange">*</span>
               </label>
@@ -134,7 +139,7 @@ const { register, handleSubmit, setValue, formState: { errors } } = useForm();
                 {...register("email", {
                   required: "Email address is required",
                 })}
-                className="bg-transparent border-[2px] border-[#ffffff5b]  focus:border-white py-[2px] pl-1 rounded-md outline-none"
+                className="bg-transparent border-[2px] w-full border-[#ffffff5b]  focus:border-white py-[2px] pl-1 rounded-md outline-none"
                 type="email"
               />
               {errors.email && (
@@ -144,7 +149,7 @@ const { register, handleSubmit, setValue, formState: { errors } } = useForm();
               )}
             </div>
 
-            <div>
+            <div className="md:w-1/2 w-full" >
               <label className="block">
                 Company Name <span className="text-appOrange">*</span>
               </label>
@@ -152,7 +157,7 @@ const { register, handleSubmit, setValue, formState: { errors } } = useForm();
                 {...register("companyName", {
                   required: "Company name is required",
                 })}
-                className="bg-transparent border-[2px] border-[#ffffff5b]  focus:border-white py-[2px] pl-1 rounded-md outline-none"
+                className="bg-transparent w-full border-[2px] border-[#ffffff5b]  focus:border-white py-[2px] pl-1 rounded-md outline-none"
                 type="text"
               />
               {errors.companyName && (
@@ -165,23 +170,31 @@ const { register, handleSubmit, setValue, formState: { errors } } = useForm();
 
           {/* Country Selection */}
 
-          <CountrySelector register={register} errors={errors} setValue={setValue} />
+          <CountrySelector
+            register={register}
+            errors={errors}
+            setValue={setValue}
+          />
 
           {/* Help Message */}
           <div>
-            <label className="block">How can we help? <span  className="text-appOrange">*</span></label>
+            <label className="block">
+              How can we help? <span className="text-appOrange">*</span>
+            </label>
             <textarea
               {...register("help", { required: "This field is required" })}
-              className="input-field h-24 bg-transparent w-full border-[2px] border-[#ffffff82] placeholder:text-white focus:border-white rounded-md p-2 outline-none resize-none"
+              className="input-field h-24 bg-transparent w-full border-[2px] border-[#ffffff82] placeholder:text-white mt-1 focus:border-white rounded-md p-2 outline-none resize-none"
               placeholder="Describe your needs..."
             />
             {errors.help && (
-              <p className="text-red-500">{errors.help.message}</p>
+              <p className="text-appOrange">{errors.help.message}</p>
             )}
           </div>
           {/* Services Checkboxes */}
           <div>
-            <label className="block">Products/Services <span className="text-appOrange">*</span></label>
+            <label className="block">
+              Products/Services <span className="text-appOrange">*</span>
+            </label>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
               {servicesList.map((service, index) => (
                 <label key={index} className="flex items-center space-x-2">
@@ -212,10 +225,10 @@ const { register, handleSubmit, setValue, formState: { errors } } = useForm();
 
 export default FrormSection;
 
-
 const CountrySelector = ({ register, errors, setValue }) => {
-
+  
   const [countries, setCountries] = useState([]);
+
   useEffect(() => {
     fetch("https://restcountries.com/v3.1/all")
       .then((res) => res.json())
@@ -224,7 +237,11 @@ const CountrySelector = ({ register, errors, setValue }) => {
           value: country.name.common,
           label: (
             <div className="flex items-center gap-2">
-              <img src={country.flags.svg} alt={country.name.common} className="w-5 h-5 rounded-full" />
+              <img
+                src={country.flags.svg}
+                alt={country.name.common}
+                className="w-5 h-5 rounded-full"
+              />
               {country.name.common}
             </div>
           ),
@@ -235,69 +252,66 @@ const CountrySelector = ({ register, errors, setValue }) => {
   }, []);
 
   return (
-<div className="bg-transparent  p-2">
-
-  <label className="block text-white">
-    Country <span className="text-appOrange">*</span>
-  </label>
-  <Select
-  {...register("country")}
-    options={countries}
-    className="mt-1 bg-transparent placeholder:text-white text-white"
-    placeholder="Choose a country"
-
-    styles={{
-      control: (baseStyles) => ({
-        ...baseStyles,
-        backgroundColor: "transparent", // Transparent background
-        borderColor: "white", // White border
-        color: "white", // White text
-      }),
-      menu: (base) => ({
-        ...base,
-        backgroundColor: "orange", // Orange dropdown background
-        backdropFilter: "blur(10px)",
-      }),
-      menuList: (base) => ({
-        ...base,
-        backgroundColor: "orange", // Ensures dropdown background stays orange
-      }),
-      option: (base, { isFocused, isSelected }) => ({
-        ...base,
-        backgroundColor: isSelected ? "white" : isFocused ? "white" : "orange", // White on hover/selected
-        color: isSelected ? "orange" : isFocused ? "orange" : "white", // Orange text on hover/selected
-      }),
-      singleValue: (base) => ({
-        ...base,
-        color: "white", // White text for selected value
-      }),
-      placeholder: (base) => ({
-        ...base,
-        color: "white", // Slightly faded placeholder
-      }),
-      input: (base) => ({
-        ...base,
-        color: "white", 
-
-      }),
-      noOptionsMessage: (base) => ({
-        ...base,
-        backgroundColor: "orange", 
-        color: "white", // White text
-        padding: "10px", // Padding for better visibility
-        textAlign: "center", // Center text
-        fontWeight: "bold",
-      }),
-
-    }}
-    
-    
-    onChange={(selected) => setValue("country", selected.value)}
-  />
-  {errors.country && <p className="text-appOrange">{errors.country.message}</p>}
-</div>
-
-
+    <div className="bg-transparent  p-2">
+      <label className="block text-white">
+        Country <span className="text-appOrange">*</span>
+      </label>
+      <Select
+        {...register("country")}
+        options={countries}
+        className="mt-1 bg-transparent placeholder:text-white text-white"
+        placeholder="Choose a country"
+        styles={{
+          control: (baseStyles) => ({
+            ...baseStyles,
+            backgroundColor: "transparent", // Transparent background
+            borderColor: "white", // White border
+            color: "white", // White text
+          }),
+          menu: (base) => ({
+            ...base,
+            backgroundColor: "orange", // Orange dropdown background
+            backdropFilter: "blur(10px)",
+          }),
+          menuList: (base) => ({
+            ...base,
+            backgroundColor: "orange", // Ensures dropdown background stays orange
+          }),
+          option: (base, { isFocused, isSelected }) => ({
+            ...base,
+            backgroundColor: isSelected
+              ? "white"
+              : isFocused
+              ? "white"
+              : "orange", // White on hover/selected
+            color: isSelected ? "orange" : isFocused ? "orange" : "white", // Orange text on hover/selected
+          }),
+          singleValue: (base) => ({
+            ...base,
+            color: "white", // White text for selected value
+          }),
+          placeholder: (base) => ({
+            ...base,
+            color: "white", // Slightly faded placeholder
+          }),
+          input: (base) => ({
+            ...base,
+            color: "white",
+          }),
+          noOptionsMessage: (base) => ({
+            ...base,
+            backgroundColor: "orange",
+            color: "white", // White text
+            padding: "10px", // Padding for better visibility
+            textAlign: "center", // Center text
+            fontWeight: "bold",
+          }),
+        }}
+        onChange={(selected) => setValue("country", selected.value)}
+      />
+      {errors.country && (
+        <p className="text-appOrange">{errors.country.message}</p>
+      )}
+    </div>
   );
 };
-
