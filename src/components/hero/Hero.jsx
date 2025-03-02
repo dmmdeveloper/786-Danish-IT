@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 // import loading from "../../assets/Animation_1740565613749.gif";
-import loading from "../../assets/tech.gif";
+// import loading from "../../assets/tech.gif";
 import gif1 from "../../assets/digital.gif";
 import gif2 from "../../assets/software.gif";
+import gif3 from "../../assets/SEO.gif";
 import { motion, AnimatePresence } from "framer-motion";
 import { useSwipeable } from "react-swipeable";
 
@@ -28,7 +29,7 @@ function Hero() {
     <section
       {...handlers}
       style={{
-        backgroundImage: `url(${loading})`,
+        // backgroundImage: `url(${loading})`,
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
         backgroundSize: "contain",
@@ -124,7 +125,7 @@ export default Hero;
 const poster = [
   {
     id: 0,
-    video: gif1,
+    video: gif2,
     heading: `Transform Ideas <br/> into Powerful <br/> Software`,
     desciption:
       "Custom software, mobile apps, and cloud solutions designed to scale your business with <br/> cutting-edge innovation and seamless functionality.",
@@ -133,7 +134,7 @@ const poster = [
   },
   {
     id: 1,
-    video: gif2,
+    video: gif3,
     heading: "Turn Clicks <br/> into Revenue <br/> Streams",
     desciption:
       "Grow your online presence with expert SEO, social media marketing, and monetization <br/> strategies for YouTube, Facebook, and e-commerce platforms.",
